@@ -1,0 +1,7 @@
+.messages {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: "c d";
+    grid-template-columns: 2fr 10fr;
+    
+}

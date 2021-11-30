@@ -1,0 +1,16 @@
+.dialogs {
+    padding: 5px;
+    background-color: rgb(96, 177, 224);
+    grid-area: d;
+}
+
+
+#parent {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.dialog {
+    margin-bottom: 10px;
+}
