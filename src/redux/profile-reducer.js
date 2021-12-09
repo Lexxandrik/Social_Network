@@ -42,4 +42,5 @@ export let addPostCreator = () =>  ({type: 'ADD-POST'});
 
 export let updateNewPostTextCreator = (text) =>({type: 'UPDATE-NEW-POST-TEXT', text: text});
 
-export default profileReducer;
+
+export default profileReducer; 
