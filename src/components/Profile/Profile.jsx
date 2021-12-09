@@ -1,5 +1,4 @@
-
-import MyPosts from "./Myposts/Myposts";
+import MyPostsContainer from "./Myposts/MypostsContainer";
 
 const Profile = (props) => {
   return (
@@ -8,7 +7,7 @@ const Profile = (props) => {
         <img src="" alt="" />
       </div>
       <div className="profileInfo">Profile Info</div>
-      <MyPosts state={props.state.postArray} addPost={props.addPost}/>
+      <MyPostsContainer store={props.store}/>
     </div>
   );
 };

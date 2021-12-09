@@ -1,5 +1,5 @@
 .app-wrapper {
-  margin: 0 auto;
+  margin: 10px 10px;
   max-width:1000px;
   display: grid;
   grid-template-areas: 
@@ -13,8 +13,10 @@
 }
 
 .header {
+  /* margin: 10px; */
   grid-area: h;
   padding: 10px;
+  border-radius: 3px;
   
 }
 
@@ -22,11 +24,13 @@
   padding: 10px;
   grid-area: n;
   background-color: rgb(214, 202, 26);
+  border-radius: 3px;
 }
 
 .profile {
   padding: 10px;
   grid-area: p;
   background-color: rgb(67, 94, 216);
+  border-radius: 3px;
 }
 

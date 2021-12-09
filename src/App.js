@@ -6,14 +6,22 @@ import { Route, Routes } from "react-router";
 import Messages from "./components/Messages/Messages";
 
 function App(props) {
-
   return (
     <div className="app-wrapper">
       <Header />
       <Navbar />
       <Routes>
-        <Route exact path="/" element={<Profile state={props.state.profilePage} addPost={props.addPost}/>} />
-        <Route path='/contact/' element={<Messages state={props.state.messages} />}/>
+        <Route
+          exact
+          path="/"
+          element={
+            <Profile store={props.store} />
+          }
+        />
+        <Route
+          path="/contact/"
+          element={<Messages store={props.store} />}
+        />
       </Routes>
     </div>
   );

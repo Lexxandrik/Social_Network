@@ -1,24 +1,39 @@
 import Post from "./Post/Post";
-import styles from './Myposts.module.css'
+import styles from "./Myposts.module.css";
 import React from "react";
+
 
 const MyPosts = (props) => {
 
-  let newPost = React.createRef();
-  let addPost = () => {
+  let mapPost = props.posts.map((post) => (
+    <Post message={post.message} key={post.id} likesCount={post.likesCount} />
+  ));
 
-    let text = newPost.current.value;
-    props.addPost(text);
+  let onAddPost = () => {
+    props.addPost();
   };
-  
 
-  let mapPost = props.state.map(post => <Post message={post.message} likesCount={post.likesCount}/>)
-  
+  let onPostChange = (e) => {
+    let text = e.target.value;
+    props.updateNewPostText(text);
+  };
+
   return (
     <div className={styles.myposts}>
-      <div>My Posts</div>
-      <textarea ref={newPost} name="" id="" cols="30" rows="3"></textarea>
-      <button onClick={addPost} className={styles.add}>Добавить</button>
+      <div className={styles.headname}>My Posts</div>
+      <div>
+        <textarea
+          onChange={onPostChange}
+          value={props.newPostText}
+          name=""
+          id=""
+          cols="30"
+          rows="3"
+        ></textarea>
+        <button onClick={onAddPost} className={styles.add}>
+          Добавить
+        </button>
+      </div>
       {mapPost}
     </div>
   );

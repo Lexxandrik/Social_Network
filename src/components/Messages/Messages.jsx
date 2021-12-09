@@ -1,13 +1,14 @@
-import Contacts from './Contacts/Contacts';
-import Dialogs from './Dialogs/Dialogs';
+
+import ContactsContainer from './Contacts/ContactsContainer';
+
+import DialogsContainer from './Dialogs/DialogsContainer';
 import styles from './Messages.module.css'
 
 const Messages =(props)=>{
-//   debugger;
     return (
         <div className={styles.messages}>
-            <Contacts state={props.state.contactsArray} />
-            <Dialogs state={props.state.dialogsArray}/>
+            <ContactsContainer store = {props.store} />
+            <DialogsContainer store = {props.store}/>
         </div>
     )
 }

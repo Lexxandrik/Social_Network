@@ -2,6 +2,7 @@
     padding: 5px;
     background-color: rgb(182, 145, 145);
     grid-area: c;
+    border-radius: 5px;
 }
 
 #parent {

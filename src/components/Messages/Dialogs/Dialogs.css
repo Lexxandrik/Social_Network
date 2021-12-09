@@ -2,6 +2,7 @@
     padding: 5px;
     background-color: rgb(96, 177, 224);
     grid-area: d;
+    border-radius: 3px;
 }
 
 
@@ -13,4 +14,8 @@
 
 .dialog {
     margin-bottom: 10px;
+}
+
+textarea {
+    border-radius: 5px;
 }
